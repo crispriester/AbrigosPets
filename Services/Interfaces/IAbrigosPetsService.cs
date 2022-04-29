@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Service.Interfaces
 {
-    class IAbrigosPetsService
+    public class IAbrigosPetsService
     {
     }
 }

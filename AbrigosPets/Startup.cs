@@ -11,6 +11,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Repository.Interfaces;
+using Repository.Repositories;
+using Service.Interfaces;
+using Service.Services;
 
 namespace AbrigosPets
 {
@@ -26,8 +30,11 @@ namespace AbrigosPets
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
+
+            services.AddSingleton<IAbrigosPetsRepository, AbrigosPetsRepository>();
+            services.AddTransient<IAbrigosPetsService, AbrigosPetsService>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AbrigosPets", Version = "v1" });

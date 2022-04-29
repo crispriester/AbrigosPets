@@ -1,11 +1,46 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Repository.dll": {}
+        }
+      },
+      "Utils/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Utils.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Utils.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Repository/1.0.0": {
+      "type": "project",
+      "path": "../Repository/Repository.csproj",
+      "msbuildProject": "../Repository/Repository.csproj"
+    },
+    "Utils/1.0.0": {
+      "type": "project",
+      "path": "../Utils/Utils.csproj",
+      "msbuildProject": "../Utils/Utils.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "Repository >= 1.0.0",
+      "Utils >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\cristina.priester\\.nuget\\packages\\": {},
@@ -38,7 +73,14 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Repository\\Repository.csproj": {
+              "projectPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Repository\\Repository.csproj"
+            },
+            "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Utils\\Utils.csproj": {
+              "projectPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Utils\\Utils.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

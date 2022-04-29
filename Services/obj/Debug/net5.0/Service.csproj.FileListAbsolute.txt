@@ -1,0 +1,17 @@
+C:\Users\cristina.priester\source\repos\AbrigosPets\Services\bin\Debug\net5.0\Service.deps.json
+C:\Users\cristina.priester\source\repos\AbrigosPets\Services\bin\Debug\net5.0\Service.dll
+C:\Users\cristina.priester\source\repos\AbrigosPets\Services\bin\Debug\net5.0\ref\Service.dll
+C:\Users\cristina.priester\source\repos\AbrigosPets\Services\bin\Debug\net5.0\Service.pdb
+C:\Users\cristina.priester\source\repos\AbrigosPets\Services\bin\Debug\net5.0\Repository.dll
+C:\Users\cristina.priester\source\repos\AbrigosPets\Services\bin\Debug\net5.0\Utils.dll
+C:\Users\cristina.priester\source\repos\AbrigosPets\Services\bin\Debug\net5.0\Repository.pdb
+C:\Users\cristina.priester\source\repos\AbrigosPets\Services\bin\Debug\net5.0\Utils.pdb
+C:\Users\cristina.priester\source\repos\AbrigosPets\Services\obj\Debug\net5.0\Service.csproj.AssemblyReference.cache
+C:\Users\cristina.priester\source\repos\AbrigosPets\Services\obj\Debug\net5.0\Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cristina.priester\source\repos\AbrigosPets\Services\obj\Debug\net5.0\Service.AssemblyInfoInputs.cache
+C:\Users\cristina.priester\source\repos\AbrigosPets\Services\obj\Debug\net5.0\Service.AssemblyInfo.cs
+C:\Users\cristina.priester\source\repos\AbrigosPets\Services\obj\Debug\net5.0\Service.csproj.CoreCompileInputs.cache
+C:\Users\cristina.priester\source\repos\AbrigosPets\Services\obj\Debug\net5.0\Service.csproj.CopyComplete
+C:\Users\cristina.priester\source\repos\AbrigosPets\Services\obj\Debug\net5.0\Service.dll
+C:\Users\cristina.priester\source\repos\AbrigosPets\Services\obj\Debug\net5.0\ref\Service.dll
+C:\Users\cristina.priester\source\repos\AbrigosPets\Services\obj\Debug\net5.0\Service.pdb
