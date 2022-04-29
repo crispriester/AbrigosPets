@@ -8,23 +8,23 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\cristina.priester\\.nuget\\packages\\": {},
+    "C:\\Users\\mateu\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Services\\Service.csproj",
+      "projectUniqueName": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Services\\Service.csproj",
       "projectName": "Service",
-      "projectPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Services\\Service.csproj",
-      "packagesPath": "C:\\Users\\cristina.priester\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Services\\obj\\",
+      "projectPath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Services\\Service.csproj",
+      "packagesPath": "C:\\Users\\mateu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\cristina.priester\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mateu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -65,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
