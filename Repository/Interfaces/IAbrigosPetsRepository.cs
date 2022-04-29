@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Repository.Interfaces
 {
-    public class IAbrigosPetsRepository
+    public interface IAbrigosPetsRepository
     {
     }
 }

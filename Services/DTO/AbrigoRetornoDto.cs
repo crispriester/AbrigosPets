@@ -11,7 +11,7 @@ namespace Service.DTO
     {
         public Guid Id { get; set; }
         public string Nome { get; set; }
-        public int Telefone { get; set; }
+        public long Telefone { get; set; }
         public string Endereco { get; set; }
 
         public static AbrigoRetornoDto DeAbrigosPetsEntityParaAbrigoRetornoDto(AbrigosPetsEntity abrigosPetsEntity)
