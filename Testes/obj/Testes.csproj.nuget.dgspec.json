@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Testes\\Testes.csproj": {}
+    "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Testes\\Testes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\AbrigosPets\\AbrigosPets.csproj": {
+    "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\AbrigosPets\\AbrigosPets.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\AbrigosPets\\AbrigosPets.csproj",
+        "projectUniqueName": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\AbrigosPets\\AbrigosPets.csproj",
         "projectName": "AbrigosPets",
-        "projectPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\AbrigosPets\\AbrigosPets.csproj",
-        "packagesPath": "C:\\Users\\cristina.priester\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\AbrigosPets\\obj\\",
+        "projectPath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\AbrigosPets\\AbrigosPets.csproj",
+        "packagesPath": "C:\\Users\\mateu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\AbrigosPets\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\cristina.priester\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mateu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Services\\Service.csproj": {
-                "projectPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Services\\Service.csproj"
+              "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Services\\Service.csproj": {
+                "projectPath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Services\\Service.csproj"
               }
             }
           }
@@ -63,6 +63,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.16, 5.0.16]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -71,24 +77,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Repository\\Repository.csproj": {
+    "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Repository\\Repository.csproj",
-        "packagesPath": "C:\\Users\\cristina.priester\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Repository\\obj\\",
+        "projectPath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\mateu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\cristina.priester\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mateu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -129,24 +135,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Services\\Service.csproj": {
+    "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Services\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Services\\Service.csproj",
+        "projectUniqueName": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Services\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Services\\Service.csproj",
-        "packagesPath": "C:\\Users\\cristina.priester\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Services\\obj\\",
+        "projectPath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Services\\Service.csproj",
+        "packagesPath": "C:\\Users\\mateu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\cristina.priester\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mateu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -161,11 +167,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Repository\\Repository.csproj"
+              "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Repository\\Repository.csproj"
               },
-              "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Utils\\Utils.csproj": {
-                "projectPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Utils\\Utils.csproj"
+              "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Utils\\Utils.csproj": {
+                "projectPath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Utils\\Utils.csproj"
               }
             }
           }
@@ -194,24 +200,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Testes\\Testes.csproj": {
+    "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Testes\\Testes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Testes\\Testes.csproj",
+        "projectUniqueName": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Testes\\Testes.csproj",
         "projectName": "Testes",
-        "projectPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Testes\\Testes.csproj",
-        "packagesPath": "C:\\Users\\cristina.priester\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Testes\\obj\\",
+        "projectPath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Testes\\Testes.csproj",
+        "packagesPath": "C:\\Users\\mateu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Testes\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\cristina.priester\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mateu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -226,14 +232,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\AbrigosPets\\AbrigosPets.csproj": {
-                "projectPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\AbrigosPets\\AbrigosPets.csproj"
+              "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\AbrigosPets\\AbrigosPets.csproj": {
+                "projectPath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\AbrigosPets\\AbrigosPets.csproj"
               },
-              "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Repository\\Repository.csproj"
+              "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Repository\\Repository.csproj"
               },
-              "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Services\\Service.csproj": {
-                "projectPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Services\\Service.csproj"
+              "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Services\\Service.csproj": {
+                "projectPath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Services\\Service.csproj"
               }
             }
           }
@@ -288,24 +294,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Utils\\Utils.csproj": {
+    "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Utils\\Utils.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Utils\\Utils.csproj",
+        "projectUniqueName": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Utils\\Utils.csproj",
         "projectName": "Utils",
-        "projectPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Utils\\Utils.csproj",
-        "packagesPath": "C:\\Users\\cristina.priester\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Utils\\obj\\",
+        "projectPath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Utils\\Utils.csproj",
+        "packagesPath": "C:\\Users\\mateu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Utils\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\cristina.priester\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mateu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -346,7 +352,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

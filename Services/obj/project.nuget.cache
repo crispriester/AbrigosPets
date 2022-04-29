@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "br8yBihHpUvfXPGQUUglte2VvNYzK2wN9NUmq1uCn+I55POYkaqviDc6+sakDAr3lYgOtahXN4x5Qcik7yRoTg==",
+  "dgSpecHash": "dWiuzVPKMD7O1os2+Gta3PzTimR3aOQ+rsV+Apr4yU2jqkRox6bIqf/NrR5XvQAzlnrKVOnfpUXaYB9sHnNPyA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Services\\Service.csproj",
+  "projectFilePath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Services\\Service.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Services\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

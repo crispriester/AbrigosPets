@@ -243,23 +243,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cristina.priester\\.nuget\\packages\\": {},
+    "C:\\Users\\mateu\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\AbrigosPets\\AbrigosPets.csproj",
+      "projectUniqueName": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\AbrigosPets\\AbrigosPets.csproj",
       "projectName": "AbrigosPets",
-      "projectPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\AbrigosPets\\AbrigosPets.csproj",
-      "packagesPath": "C:\\Users\\cristina.priester\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\AbrigosPets\\obj\\",
+      "projectPath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\AbrigosPets\\AbrigosPets.csproj",
+      "packagesPath": "C:\\Users\\mateu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\AbrigosPets\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\cristina.priester\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mateu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -274,8 +274,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Services\\Service.csproj": {
-              "projectPath": "C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\Services\\Service.csproj"
+            "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Services\\Service.csproj": {
+              "projectPath": "C:\\Users\\mateu\\Desktop\\AbrigosPets\\AbrigosPets\\Services\\Service.csproj"
             }
           }
         }
@@ -305,6 +305,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.16, 5.0.16]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -313,16 +319,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\cristina.priester\\source\\repos\\AbrigosPets\\AbrigosPets\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
