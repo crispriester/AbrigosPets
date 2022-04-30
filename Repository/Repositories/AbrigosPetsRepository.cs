@@ -48,5 +48,39 @@ namespace Repository.Repositories
                 ),
             };
         }
+
+        public List<AbrigosPetsEntity> Create(object propriedade)
+        {
+            ListaAbrigosEntity.Add((AbrigosPetsEntity)propriedade);
+            return ListaAbrigosEntity;
+        }
+
+        public object Delete(Guid idAbrigo)
+        {
+            var entidade = ListaAbrigosEntity.Find(x => x.Id == idAbrigo);
+
+            return entidade;
+        }
+
+        public object Patch(Guid idAbrigo)
+        {
+            var entidade = ListaAbrigosEntity.Find(x => x.Id == idAbrigo);
+
+            return entidade;
+        }
+
+        public object Read(Guid idAbrigo)
+        {
+            var entidade = ListaAbrigosEntity.Find(x => x.Id == idAbrigo);
+
+            return entidade;
+        }
+
+        public object Update(Guid idAbrigo)
+        {
+            var entidade = ListaAbrigosEntity.Find(x => x.Id == idAbrigo);
+
+            return entidade;
+        }
     }
 }

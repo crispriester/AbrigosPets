@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vanessa.lopes\\AbrigosPets\\Utils\\Utils.csproj": {}
+    "C:\\Users\\mateu\\Desktop\\Trabalinho\\AbrigosPets\\Utils\\Utils.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vanessa.lopes\\AbrigosPets\\Utils\\Utils.csproj": {
+    "C:\\Users\\mateu\\Desktop\\Trabalinho\\AbrigosPets\\Utils\\Utils.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vanessa.lopes\\AbrigosPets\\Utils\\Utils.csproj",
+        "projectUniqueName": "C:\\Users\\mateu\\Desktop\\Trabalinho\\AbrigosPets\\Utils\\Utils.csproj",
         "projectName": "Utils",
-        "projectPath": "C:\\Users\\vanessa.lopes\\AbrigosPets\\Utils\\Utils.csproj",
-        "packagesPath": "C:\\Users\\vanessa.lopes\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vanessa.lopes\\AbrigosPets\\Utils\\obj\\",
+        "projectPath": "C:\\Users\\mateu\\Desktop\\Trabalinho\\AbrigosPets\\Utils\\Utils.csproj",
+        "packagesPath": "C:\\Users\\mateu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mateu\\Desktop\\Trabalinho\\AbrigosPets\\Utils\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\vanessa.lopes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mateu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
