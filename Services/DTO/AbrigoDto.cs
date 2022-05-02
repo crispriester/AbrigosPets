@@ -10,6 +10,6 @@ namespace Service.DTO
     {
         public string Nome { get; set; }
         public string Endereco { get; set; }
-        public long Telefone { get; set; }
+        public long Telefone { get; set; } = 0;
     }
 }

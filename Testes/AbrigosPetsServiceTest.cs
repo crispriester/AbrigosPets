@@ -53,6 +53,37 @@ namespace Testes
         }
 
         [Fact]
+        public void Create_DeveGerarErro_CampoNaoInformado()
+        {
+            Setup();
+
+            //Entrada
+            var dto = new AbrigoDto
+            {
+                Nome = "Dom Labrador",
+                Endereco = "",
+                Telefone = 47966667866
+            };
+
+            var entidade = new AbrigosPetsEntity
+            (
+                "Dom Labrador",
+                "",
+                47966667866
+            );
+
+            //Saida
+            var mensagemEsperadaRetorno = new MensagemRetornoDto("Todos os campos devem ser preenchidos.");
+
+            //result
+            _abrigosPetsRepository.Setup(x => x.Create(entidade));
+
+            var retorno = (MensagemRetornoDto)_service.Create(dto).Item2;
+
+            Assert.Equal(mensagemEsperadaRetorno.Mensagem, retorno.Mensagem);
+        }
+
+        [Fact]
         public void Patch_DeveAtualizarAlgunsValores()
         {
             Setup();
@@ -80,12 +111,36 @@ namespace Testes
                     47984727465
                 )
             };
-            
-            var ListaAbrigosEntityAtualizada = new List<AbrigosPetsEntity>()
+
+            //Saida
+            var mensagemEsperadaRetorno = new MensagemRetornoDto("O abrigo foi alterado com sucesso!");
+
+            //result
+            _abrigosPetsRepository.Setup(x => x.GetById(ListaAbrigosEntity[0].Id)).Returns(ListaAbrigosEntity[0]);
+
+            var retorno = (MensagemRetornoDto)_service.Patch(ListaAbrigosEntity[0].Id, dto).Item2;
+
+            Assert.Equal(mensagemEsperadaRetorno.Mensagem, retorno.Mensagem);
+        }
+
+        [Fact]
+        public void Patch_DeveGerarErro_TodasInformacoesModificadas()
+        {
+            Setup();
+
+            //Entrada
+            var dto = new AbrigoDto()
+            {
+                Nome = "Core de Mãe",
+                Endereco = "Rua Cachorrada, Blumenau",
+                Telefone = 47983727456
+            };
+
+            var ListaAbrigosEntity = new List<AbrigosPetsEntity>()
             {
                  new AbrigosPetsEntity
                 (
-                    "Core de Mãe",
+                    "Coração de Mãe",
                     "Rua cachorrada, Blumenau",
                     47984727456
                 ),
@@ -98,7 +153,7 @@ namespace Testes
             };
 
             //Saida
-            var mensagemEsperadaRetorno = new MensagemRetornoDto("O abrigo foi alterado com sucesso!");
+            var mensagemEsperadaRetorno = new MensagemRetornoDto("Apenas alguns dados devem ser alterados. Atualização não realizada.");
 
             //result
             _abrigosPetsRepository.Setup(x => x.GetById(ListaAbrigosEntity[0].Id)).Returns(ListaAbrigosEntity[0]);
@@ -107,6 +162,71 @@ namespace Testes
 
             Assert.Equal(mensagemEsperadaRetorno.Mensagem, retorno.Mensagem);
         }
+
+        [Fact]
+        public void Patch_DeveGerarErro_NenhumaInformacaoModificada()
+        {
+            Setup();
+
+            //Entrada
+            var dto = new AbrigoDto()
+            {
+                Nome = "Coração de Mãe",
+                Endereco = "Rua cachorrada, Blumenau",
+                Telefone = 47984727456
+            };
+
+            var ListaAbrigosEntity = new List<AbrigosPetsEntity>()
+            {
+                 new AbrigosPetsEntity
+                (
+                    "Coração de Mãe",
+                    "Rua cachorrada, Blumenau",
+                    47984727456
+                ),
+                 new AbrigosPetsEntity
+                (
+                    "Só da Cachorro",
+                    "Roda mijada, Jaguara do Sul",
+                    47984727465
+                )
+            };
+
+            //Saida
+            var mensagemEsperadaRetorno = new MensagemRetornoDto("Apenas alguns dados devem ser alterados. Atualização não realizada.");
+
+            //result
+            _abrigosPetsRepository.Setup(x => x.GetById(ListaAbrigosEntity[0].Id)).Returns(ListaAbrigosEntity[0]);
+
+            var retorno = (MensagemRetornoDto)_service.Patch(ListaAbrigosEntity[0].Id, dto).Item2;
+
+            Assert.Equal(mensagemEsperadaRetorno.Mensagem, retorno.Mensagem);
+        }
+
+        [Fact]
+        public void Patch_DeveGerarErro_IdErrado()
+        {
+            Setup();
+
+            //Entrada
+            var dto = new AbrigoDto()
+            {
+                Nome = "Core de Mãe",
+                Endereco = "Rua cachorrada, Blumenau",
+                Telefone = 47984727456
+            };
+
+            //Saida
+            var mensagemEsperadaRetorno = new MensagemRetornoDto("O abrigo não foi encontrado.");
+
+            //result
+            _abrigosPetsRepository.Setup(x => x.GetById(new Guid()));
+
+            var retorno = (MensagemRetornoDto)_service.Patch(It.IsAny<Guid>(), dto).Item2;
+
+            Assert.Equal(mensagemEsperadaRetorno.Mensagem, retorno.Mensagem);
+        }
+
 
         [Fact]
         public void Update_DeveAtualizar()

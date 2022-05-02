@@ -22,12 +22,9 @@ namespace Service.Services
 
         public (int, object) Create(AbrigoDto abrigoDto)
         {
-            foreach (var propriedade in abrigoDto.GetType().GetProperties())
+            if (abrigoDto.Nome == null || abrigoDto.Endereco == null || abrigoDto.Telefone == 0)
             {
-                if (propriedade.GetValue(abrigoDto) is null or "")
-                {
-                    return ((int)EnumRetornosHttp.BadRequest, new MensagemRetornoDto($"O campo {propriedade.Name} deve ser preenchido."));
-                }
+                return ((int)EnumRetornosHttp.BadRequest, new MensagemRetornoDto($"Todos os campos devem ser preenchidos."));
             }
 
             var abrigoEntity = AbrigosPetsEntity.DeAbrigoRetornoDtoParaAbrigosPetsEntity(abrigoDto.Nome, abrigoDto.Endereco, abrigoDto.Telefone);
