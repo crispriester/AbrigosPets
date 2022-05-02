@@ -49,38 +49,24 @@ namespace Repository.Repositories
             };
         }
 
-        public List<AbrigosPetsEntity> Create(object propriedade)
+        public virtual void Create(AbrigosPetsEntity abrigosPetsEntity)
         {
-            ListaAbrigosEntity.Add((AbrigosPetsEntity)propriedade);
-            return ListaAbrigosEntity;
+            ListaAbrigosEntity.Add(abrigosPetsEntity);
         }
 
-        public object Delete(Guid idAbrigo)
+        public virtual void Delete(Guid idAbrigo)
+        {
+            var entidade = ListaAbrigosEntity.Find(x => x.Id == idAbrigo);
+
+            ListaAbrigosEntity.Remove(entidade);
+        }
+
+        public virtual AbrigosPetsEntity GetById(Guid idAbrigo)
         {
             var entidade = ListaAbrigosEntity.Find(x => x.Id == idAbrigo);
 
             return entidade;
         }
 
-        public object Patch(Guid idAbrigo)
-        {
-            var entidade = ListaAbrigosEntity.Find(x => x.Id == idAbrigo);
-
-            return entidade;
-        }
-
-        public object Read(Guid idAbrigo)
-        {
-            var entidade = ListaAbrigosEntity.Find(x => x.Id == idAbrigo);
-
-            return entidade;
-        }
-
-        public object Update(Guid idAbrigo)
-        {
-            var entidade = ListaAbrigosEntity.Find(x => x.Id == idAbrigo);
-
-            return entidade;
-        }
     }
 }

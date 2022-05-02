@@ -13,9 +13,9 @@ namespace Service.Interfaces
 
         public (int, object) Read(Guid id);
 
-        public (int, object) Update(Guid id);
+        public (int, object) Update(Guid id, AbrigoDto abrigoDto);
 
-        public (int, object) Patch(Guid id);
+        public (int, object) Patch(Guid id, AbrigoDto abrigoDto);
 
         public (int, object) Delete(Guid id);
 

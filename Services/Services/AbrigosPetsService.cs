@@ -1,4 +1,5 @@
-﻿using Repository.Interfaces;
+﻿using Repository.Entities;
+using Repository.Interfaces;
 using Service.DTO;
 using Service.Interfaces;
 using System;
@@ -29,77 +30,78 @@ namespace Service.Services
                 }
             }
 
-            //_abrigosPetsRepository.Create(abrigoDto.Nome, abrigoDto.Endereco, abrigoDto.Telefone);
+            var abrigoEntity = AbrigosPetsEntity.DeAbrigoRetornoDtoParaAbrigosPetsEntity(abrigoDto.Nome, abrigoDto.Endereco, abrigoDto.Telefone);
 
-            return ((int)EnumRetornosHttp.Created, new MensagemRetornoDto($"O abrigo foi incluído com sucesso!"));
+            _abrigosPetsRepository.Create(abrigoEntity);
+
+            return ((int)EnumRetornosHttp.Created, new MensagemRetornoDto("O abrigo foi incluído com sucesso!"));
         }
 
         public (int, object) Read(Guid idAbrigo)
         {
-            if (idAbrigo.Equals(""))
+            var entidade = _abrigosPetsRepository.GetById(idAbrigo);
+
+            if (entidade != null)
             {
-                return ((int)EnumRetornosHttp.BadRequest, new MensagemRetornoDto($"O campo ID deve ser preenchido."));
+                return ((int)EnumRetornosHttp.Ok, AbrigoRetornoDto.DeAbrigosPetsEntityParaAbrigoRetornoDto(entidade));
             }
-
-            //var entidade = _abrigosPetsRepository.GetById(idAbrigo);
-
-            //if (entidade != null)
-            //{
-            //    return ((int)EnumRetornosHttp.Ok, AbrigoRetornoDto.DeAbrigosPetsEntityParaAbrigoRetornoDto(entidade));
-            //}
 
             return ((int)EnumRetornosHttp.NotFound, new MensagemRetornoDto($"O abrigo não foi encontrado."));
         }
 
-        public (int, object) Update(Guid idAbrigo)
+        public (int, object) Update(Guid idAbrigo, AbrigoDto abrigoDto)
         {
-            if (idAbrigo.Equals(""))
+            var entidade = _abrigosPetsRepository.GetById(idAbrigo);
+
+            if (entidade != null)
             {
-                return ((int)EnumRetornosHttp.BadRequest, new MensagemRetornoDto($"O campo ID deve ser preenchido."));
+                if (entidade.Nome == abrigoDto.Nome || entidade.Endereco == abrigoDto.Endereco || entidade.Telefone == abrigoDto.Telefone)
+                {
+                    return ((int)EnumRetornosHttp.BadRequest, new MensagemRetornoDto($"Todos os dados devem ser alterados. Atualização não realizada."));
+                }
+
+                entidade.Nome = abrigoDto.Nome;
+                entidade.Endereco = abrigoDto.Endereco;
+                entidade.Telefone = abrigoDto.Telefone;
+
+                return ((int)EnumRetornosHttp.Ok, new MensagemRetornoDto($"O abrigo foi alterado com sucesso!"));
             }
-
-            //var entidade = _abrigosPetsRepository.GetById(idAbrigo);
-
-            //if (entidade != null)
-            //{
-            //    return ((int)EnumRetornosHttp.Ok, AbrigoRetornoDto.DeAbrigosPetsEntityParaAbrigoRetornoDto(entidade));
-            //}
 
             return ((int)EnumRetornosHttp.NotFound, new MensagemRetornoDto($"O abrigo não foi encontrado."));
         }
 
-        public (int, object) Patch(Guid idAbrigo)
+        public (int, object) Patch(Guid idAbrigo, AbrigoDto abrigoDto)
         {
-            if (idAbrigo.Equals(""))
+            var entidade = _abrigosPetsRepository.GetById(idAbrigo);
+
+            if (entidade != null)
             {
-                return ((int)EnumRetornosHttp.BadRequest, new MensagemRetornoDto($"O campo ID deve ser preenchido."));
+                if ((entidade.Nome == abrigoDto.Nome && entidade.Endereco == abrigoDto.Endereco && entidade.Telefone == abrigoDto.Telefone) ||
+                    (entidade.Nome != abrigoDto.Nome && entidade.Endereco != abrigoDto.Endereco && entidade.Telefone != abrigoDto.Telefone))
+                {
+                    return ((int)EnumRetornosHttp.BadRequest, new MensagemRetornoDto($"Apenas alguns dados devem ser alterados. Atualização não realizada."));
+                }
+
+                entidade.Nome = abrigoDto.Nome;
+                entidade.Endereco = abrigoDto.Endereco;
+                entidade.Telefone = abrigoDto.Telefone;
+
+                return ((int)EnumRetornosHttp.Ok, new MensagemRetornoDto($"O abrigo foi alterado com sucesso!"));
             }
 
-            //var entidade = _abrigosPetsRepository.GetById(idAbrigo);
-
-            //if (entidade != null)
-            //{
-            //    return ((int)EnumRetornosHttp.Ok, AbrigoRetornoDto.DeAbrigosPetsEntityParaAbrigoRetornoDto(entidade));
-            //}
-
-            return ((int)EnumRetornosHttp.NotFound, new MensagemRetornoDto($"Abrigo não encontrado."));
+            return ((int)EnumRetornosHttp.NotFound, new MensagemRetornoDto($"O abrigo não foi encontrado."));
         }
 
         public (int, object) Delete(Guid idAbrigo)
         {
-            if (idAbrigo.Equals(""))
+            if (_abrigosPetsRepository.GetById(idAbrigo) == null)
             {
-                return ((int)EnumRetornosHttp.BadRequest, new MensagemRetornoDto($"O campo ID deve ser preenchido."));
+                return ((int)EnumRetornosHttp.NotFound, new MensagemRetornoDto($"O abrigo não foi encontrado."));
             }
 
-            //if (_abrigosPetsRepository.GetById(idAbrigo) == null)
-            //{
-            //    return ((int)EnumRetornosHttp.NotFound, new MensagemRetornoDto($"Abrigo não encontrado."));
-            //}
+            _abrigosPetsRepository.Delete(idAbrigo);
 
-            //_abrigosPetsRepository.Delete(idAbrigo);
-
-            return ((int)EnumRetornosHttp.Ok, new MensagemRetornoDto($"O abrigo foi deletado."));
+            return ((int)EnumRetornosHttp.Ok, new MensagemRetornoDto($"O abrigo foi deletado com sucesso!"));
         }
     }
 }

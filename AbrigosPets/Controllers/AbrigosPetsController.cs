@@ -42,17 +42,17 @@ namespace AbrigosPets.Controllers
 
 
         [HttpPut]
-        public IActionResult Put(Guid id)
+        public IActionResult Put(Guid id, [FromBody] AbrigoDto abrigoDto)
         {
-            var (status, retorno) = _abrigosPetsService.Update(id);
+            var (status, retorno) = _abrigosPetsService.Update(id, abrigoDto);
 
             return StatusCode(status, retorno);
         }
 
         [HttpPatch]
-        public IActionResult Patch(Guid id)
+        public IActionResult Patch(Guid id, [FromBody] AbrigoDto abrigoDto)
         {
-            var (status, retorno) = _abrigosPetsService.Patch(id);
+            var (status, retorno) = _abrigosPetsService.Patch(id, abrigoDto);
 
             return StatusCode(status, retorno);
         }

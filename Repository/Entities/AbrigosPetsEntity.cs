@@ -20,5 +20,10 @@ namespace Repository.Entities
             Endereco = endereco;
             Telefone = telefone;
         }
+
+        public static AbrigosPetsEntity DeAbrigoRetornoDtoParaAbrigosPetsEntity(string nome, string endereco, long telefone)
+        {
+            return new AbrigosPetsEntity(nome, endereco, telefone);
+        }
     }
 }
