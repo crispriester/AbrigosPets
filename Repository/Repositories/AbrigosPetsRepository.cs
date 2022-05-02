@@ -49,9 +49,11 @@ namespace Repository.Repositories
             };
         }
 
-        public virtual void Create(AbrigosPetsEntity abrigosPetsEntity)
+        public virtual AbrigosPetsEntity Create(AbrigosPetsEntity abrigosPetsEntity)
         {
             ListaAbrigosEntity.Add(abrigosPetsEntity);
+
+            return abrigosPetsEntity;
         }
 
         public virtual void Delete(Guid idAbrigo)
@@ -67,6 +69,5 @@ namespace Repository.Repositories
 
             return entidade;
         }
-
     }
 }

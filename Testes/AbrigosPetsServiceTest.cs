@@ -6,6 +6,7 @@ using Moq;
 using Service.Services;
 using Repository.Entities;
 using Service.DTO;
+using System.Collections.Generic;
 
 namespace Testes
 {
@@ -48,7 +49,7 @@ namespace Testes
 
             var retorno = (MensagemRetornoDto)_service.Create(dto).Item2;
 
-            Assert.Equal(mensagemEsperadaRetorno, retorno);
+            Assert.Equal(mensagemEsperadaRetorno.Mensagem, retorno.Mensagem);
         }
 
         [Fact]
@@ -56,7 +57,55 @@ namespace Testes
         {
             Setup();
 
+            //Entrada
+            var dto = new AbrigoDto()
+            {
+                Nome = "Core de Mãe",
+                Endereco = "Rua cachorrada, Blumenau",
+                Telefone = 47984727456
+            };
+
+            var ListaAbrigosEntity = new List<AbrigosPetsEntity>()
+            {
+                 new AbrigosPetsEntity
+                (
+                    "Coração de Mãe",
+                    "Rua cachorrada, Blumenau",
+                    47984727456
+                ),
+                 new AbrigosPetsEntity
+                (
+                    "Só da Cachorro",
+                    "Roda mijada, Jaguara do Sul",
+                    47984727465
+                )
+            };
             
+            var ListaAbrigosEntityAtualizada = new List<AbrigosPetsEntity>()
+            {
+                 new AbrigosPetsEntity
+                (
+                    "Core de Mãe",
+                    "Rua cachorrada, Blumenau",
+                    47984727456
+                ),
+                 new AbrigosPetsEntity
+                (
+                    "Só da Cachorro",
+                    "Roda mijada, Jaguara do Sul",
+                    47984727465
+                )
+            };
+
+            //Saida
+            var mensagemEsperadaRetorno = new MensagemRetornoDto("O abrigo foi alterado com sucesso!");
+
+            //result
+            _abrigosPetsRepository.Setup(x => x.GetById(ListaAbrigosEntity[0].Id)).Returns(ListaAbrigosEntity[0]);
+
+            var retorno = (MensagemRetornoDto)_service.Patch(ListaAbrigosEntity[0].Id, dto).Item2;
+
+            Assert.Equal(mensagemEsperadaRetorno.Mensagem, retorno.Mensagem);
         }
 
         [Fact]

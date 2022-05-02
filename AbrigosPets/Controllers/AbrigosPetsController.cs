@@ -26,9 +26,9 @@ namespace AbrigosPets.Controllers
         [HttpPost()]
         public IActionResult Post([FromBody] AbrigoDto abrigoDto)
         {
-            var (status, retorno) = _abrigosPetsService.Create(abrigoDto);
+            var (status, mensagem) = _abrigosPetsService.Create(abrigoDto);
 
-            return StatusCode(status, retorno);
+            return StatusCode(status, mensagem);
             
         }
 
@@ -39,7 +39,6 @@ namespace AbrigosPets.Controllers
 
             return StatusCode(status, retorno);
         }
-
 
         [HttpPut]
         public IActionResult Put(Guid id, [FromBody] AbrigoDto abrigoDto)

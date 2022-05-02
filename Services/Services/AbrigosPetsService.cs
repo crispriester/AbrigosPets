@@ -24,7 +24,7 @@ namespace Service.Services
         {
             foreach (var propriedade in abrigoDto.GetType().GetProperties())
             {
-                if (propriedade.GetValue(abrigoDto) == null)
+                if (propriedade.GetValue(abrigoDto) is null or "")
                 {
                     return ((int)EnumRetornosHttp.BadRequest, new MensagemRetornoDto($"O campo {propriedade.Name} deve ser preenchido."));
                 }
@@ -34,7 +34,7 @@ namespace Service.Services
 
             _abrigosPetsRepository.Create(abrigoEntity);
 
-            return ((int)EnumRetornosHttp.Created, new MensagemRetornoDto("O abrigo foi incluído com sucesso!"));
+            return ((int)EnumRetornosHttp.Created, new MensagemRetornoDto($"O abrigo foi incluído com sucesso!"));
         }
 
         public (int, object) Read(Guid idAbrigo)
@@ -48,6 +48,7 @@ namespace Service.Services
 
             return ((int)EnumRetornosHttp.NotFound, new MensagemRetornoDto($"O abrigo não foi encontrado."));
         }
+
 
         public (int, object) Update(Guid idAbrigo, AbrigoDto abrigoDto)
         {
