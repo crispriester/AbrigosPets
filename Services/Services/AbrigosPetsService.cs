@@ -22,7 +22,7 @@ namespace Service.Services
 
         public (int, object) Create(AbrigoDto abrigoDto)
         {
-            if (abrigoDto.Nome == null || abrigoDto.Endereco == null || abrigoDto.Telefone == 0)
+            if (abrigoDto.Nome == "" || abrigoDto.Endereco == "" || abrigoDto.Telefone == 0)
             {
                 return ((int)EnumRetornosHttp.BadRequest, new MensagemRetornoDto($"Todos os campos devem ser preenchidos."));
             }
@@ -33,6 +33,7 @@ namespace Service.Services
 
             return ((int)EnumRetornosHttp.Created, new MensagemRetornoDto($"O abrigo foi incluído com sucesso!"));
         }
+
 
         public (int, object) Read(Guid idAbrigo)
         {
@@ -45,7 +46,6 @@ namespace Service.Services
 
             return ((int)EnumRetornosHttp.NotFound, new MensagemRetornoDto($"O abrigo não foi encontrado."));
         }
-
 
         public (int, object) Update(Guid idAbrigo, AbrigoDto abrigoDto)
         {
@@ -74,10 +74,14 @@ namespace Service.Services
 
             if (entidade != null)
             {
-                if ((entidade.Nome == abrigoDto.Nome && entidade.Endereco == abrigoDto.Endereco && entidade.Telefone == abrigoDto.Telefone) ||
-                    (entidade.Nome != abrigoDto.Nome && entidade.Endereco != abrigoDto.Endereco && entidade.Telefone != abrigoDto.Telefone))
+                if (entidade.Nome != abrigoDto.Nome && entidade.Endereco != abrigoDto.Endereco && entidade.Telefone != abrigoDto.Telefone)
                 {
                     return ((int)EnumRetornosHttp.BadRequest, new MensagemRetornoDto($"Apenas alguns dados devem ser alterados. Atualização não realizada."));
+                }
+
+                if (entidade.Nome == abrigoDto.Nome && entidade.Endereco == abrigoDto.Endereco && entidade.Telefone == abrigoDto.Telefone)
+                {
+                    return ((int)EnumRetornosHttp.BadRequest, new MensagemRetornoDto($"Nenhum valor é diferente dos atuais. Atualização não realizada."));
                 }
 
                 entidade.Nome = abrigoDto.Nome;
@@ -101,5 +105,6 @@ namespace Service.Services
 
             return ((int)EnumRetornosHttp.Ok, new MensagemRetornoDto($"O abrigo foi deletado com sucesso!"));
         }
+
     }
 }

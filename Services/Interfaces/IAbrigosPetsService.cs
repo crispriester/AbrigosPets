@@ -18,6 +18,5 @@ namespace Service.Interfaces
         public (int, object) Patch(Guid id, AbrigoDto abrigoDto);
 
         public (int, object) Delete(Guid id);
-
     }
 }
